@@ -33,6 +33,7 @@ int main(int argc, char* argv) {
         if (choice == -1) {
             break;
         }
+        
         while (PlaceItem(gameBoard, choice, player) != 1 && !FullGameBoard(gameBoard)) {
             scanf_s("%d", &choice);
             if (choice == -1) {
