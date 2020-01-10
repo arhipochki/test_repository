@@ -1,7 +1,8 @@
 #include <stdio.h>
-#include "func.h"
 #include <string.h>
 #include <time.h>
+#include "func.h"
+#include "defines.h"
 
 char gameBoard[5][5] = {
     {' ', '|', ' ', '|', ' '},
@@ -22,8 +23,8 @@ int main(int argc, char* argv) {
     const char* player = "player";
     const char* cpu = "cpu";
 
-    printf("\t*** Welcome to 'Tic Tac Toe' game  ***\t\n");
-    printf("\t*** If you want to exit: type '-1' ***\t\n");
+    printf("\t" AC_BLUE "*** Welcome to 'Tic Tac Toe' game  ***\t\n");
+    printf("\t*** If you want to exit: type '-1' ***\t\n" AC_RESET);
 
     DrawGameBoard(gameBoard);
 
@@ -65,15 +66,18 @@ int main(int argc, char* argv) {
         }
     }
 
+    char* message = ""; 
     if (lose == 1) {
-        printf("You lose(\n");
+        message = "0 win!";
     }
     else if (lose == 2) {
-        printf("Draw\n");
+        message = "Draw!";
     }
     else {
-        printf("You won!\n");
+        message = "X win!";
     }
+
+    printf(AC_YELLOW "\n%s\n" AC_RESET, message);
 
     return 0;
 }

@@ -1,11 +1,19 @@
-char symbol;
+#include "defines.h"
 
-#define SYMBOL(player) (strcmp(player, "player")) ? (symbol = 'O') : (symbol = 'X')
+char symbol;
 
 void DrawGameBoard(char gameBoard[5][5]) { // length = sizeof(gameBoard)/sizeof(char)
     for (int row = 0; row < 5; row++) {
         for (int col = 0; col < 5; col++) {
-            putchar(gameBoard[row][col]);
+            if (gameBoard[row][col] == 'X') {
+                printf(AC_GREEN "%c" AC_RESET, gameBoard[row][col]);
+            }
+            else if (gameBoard[row][col] == '0') {
+                printf(AC_RED "%c\x1b[0m" AC_RESET, gameBoard[row][col]);
+            }
+            else {
+                printf(AC_CYAN "%c" AC_RESET, gameBoard[row][col]);
+            }
         }
         putchar('\n');
     }
