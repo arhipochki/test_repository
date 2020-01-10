@@ -1,4 +1,4 @@
-#***Tic Tac Toe***
+#Tic Tac Toe
 
 Compile - gcc main.c func.c -o *name*.exe
 
