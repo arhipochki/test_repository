@@ -1,6 +1,6 @@
-***Tic Tac Toe***
+#***Tic Tac Toe***
 
-# compile - gcc main.c func.c -o *name*.exe
+Compile - gcc main.c func.c -o *name*.exe
 
 If you run this program in Windows, type this:
   -For PowerShell: Set-ItemProperty HKCU:\Console VirtualTerminalLevel -Type DWORD 1
