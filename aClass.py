@@ -1,3 +1,8 @@
+'''
+Test module by Alexey Arkhipov
+2019-2020
+'''
+
 class wideArray(list):
     ''' Extended list class with some sort algorithms '''
     
@@ -44,7 +49,7 @@ class wideArray(list):
     #     return wideArray.quicksort(l_nums) + e_nums + wideArray.quicksort(b_nums)
 
 
-def colorText(text, color="white", background="black"):
+def colorText(text, color="white", background="classic"):
     '''This func will return a colored text'''
 
     # more info - http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html
@@ -75,6 +80,7 @@ def colorText(text, color="white", background="black"):
     }
 
     backgrounds = {
+        "classic": "",
         "black": "\u001b[40m",
         "red": "\u001b[41m",
         "green": "\u001b[42m",
@@ -175,3 +181,9 @@ def isPrime(num):
         k += 1
     
     return (k*k > num)
+
+
+def factorial(num):
+    if num == 1:
+        return num
+    return num * factorial(num - 1)
