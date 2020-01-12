@@ -55,49 +55,49 @@ def colorText(text, color="white", background="classic"):
     # more info - http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html
 
     types = {
-        "reset": "\x1b[0m",
-        "bold": "\u001b[1m",
-        "underline": "\u001b[4m",
-        "reversed": "\u001b[7m"
+        "reset": u"\x1b[0m",
+        "bold": u"\u001b[1m",
+        "underline": u"\u001b[4m",
+        "reversed": u"\u001b[7m"
     }
 
     colors = {
-        "red": "\x1b[31m",
-        "green": "\x1b[32m",
-        "yellow": "\x1b[33m",
-        "blue": "\x1b[34m",
-        "magenta": "\x1b[35m",
-        "cyan": "\x1b[36m",
-        "white": "\u001b[37m",
+        "red": u"\x1b[31m",
+        "green": u"\x1b[32m",
+        "yellow": u"\x1b[33m",
+        "blue": u"\x1b[34m",
+        "magenta": u"\x1b[35m",
+        "cyan": u"\x1b[36m",
+        "white": u"\u001b[37m",
         #Bright colors
-        "bred": "\x1b[31;1m",
-        "bgreen": "\x1b[32;1m",
-        "byellow": "\x1b[33;1m",        
-        "bblue": "\x1b[34;1m",
-        "bmagenta": "\x1b[35;1m",
-        "bcyan": "\x1b[36;1m",
-        "bwhite": "\u001b[37;1m"
+        "bred": u"\x1b[31;1m",
+        "bgreen": u"\x1b[32;1m",
+        "byellow": u"\x1b[33;1m",        
+        "bblue": u"\x1b[34;1m",
+        "bmagenta": u"\x1b[35;1m",
+        "bcyan": u"\x1b[36;1m",
+        "bwhite": u"\u001b[37;1m"
     }
 
     backgrounds = {
         "classic": "",
-        "black": "\u001b[40m",
-        "red": "\u001b[41m",
-        "green": "\u001b[42m",
-        "yellow": "\u001b[43m",
-        "blue": "\u001b[44m",
-        "magenta": "\u001b[45m",
-        "cyan": "\u001b[46m",
-        "white": "\u001b[47m",
+        "black": u"\u001b[40m",
+        "red": u"\u001b[41m",
+        "green": u"\u001b[42m",
+        "yellow": u"\u001b[43m",
+        "blue": u"\u001b[44m",
+        "magenta": u"\u001b[45m",
+        "cyan": u"\u001b[46m",
+        "white": u"\u001b[47m",
         # Bright colors
-        "bblack": "\u001b[40;1m",
-        "bred": "\u001b[41;1m",
-        "bgreen": "\u001b[42;1m",
-        "byellow": "\u001b[43;1m",
-        "bblue": "\u001b[44;1m",
-        "bmagenta": "\u001b[45;1m",
-        "bcyan": "\u001b[46;1m",
-        "bwhite": "\u001b[47;1m"
+        "bblack": u"\u001b[40;1m",
+        "bred": u"\u001b[41;1m",
+        "bgreen": u"\u001b[42;1m",
+        "byellow": u"\u001b[43;1m",
+        "bblue": u"\u001b[44;1m",
+        "bmagenta": u"\u001b[45;1m",
+        "bcyan": u"\u001b[46;1m",
+        "bwhite": u"\u001b[47;1m"
     }
 
     if color.lower() in colors and background.lower() in backgrounds:
